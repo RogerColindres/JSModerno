@@ -7,5 +7,5 @@ if (puntaje === 1000) { //!=diferente, ==igual
     console.log('no es igual...')
 }
 
-//operador no estricto, no compara el tipo de dato
-//operador estricto, compara el tipo de dato
+//operador no estricto, no compara el tipo de dato unicamente el valor de la variable
+//operador estricto, compara el tipo de dato y el valor de la variable

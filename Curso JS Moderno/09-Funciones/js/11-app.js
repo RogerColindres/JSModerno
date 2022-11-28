@@ -1,5 +1,5 @@
-//Parametros en una funcion flecha
-const aprendiendo = function(tecnologia) {
+/***Parametros en una funcion flecha***/
+const aprendiendo = function (tecnologia) {
     console.log(`Aprendiendo ${tecnologia}`)
 }
 

@@ -11,6 +11,25 @@ const carrito = [
     { nombre: 'Celular', precio: 700 },
 ];
 
+//metodo largo foreach 
+let resultado = "";
+let i = 0;
+resultado = carrito.forEach(function (producto) {
+    if (producto.precio <= 100) {
+        i++;
+    }
+})
+if (i == carrito.length) {
+    resultado = true;
+    i = 0;
+} else {
+    resultado = false;
+    i = 0;
+}
+console.log(resultado);
+
+
+//array method every()
 const prueba = carrito.every((producto) => producto.precio <= 1000);
 console.log(prueba);
 

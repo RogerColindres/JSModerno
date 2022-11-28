@@ -1,4 +1,5 @@
-//reduce 
+/***reduce***/
+//funcion reductora sobre cada elemento de un arreglo devolviendo como resultado un unico valor
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
 
 const carrito = [
@@ -20,13 +21,14 @@ console.log(total);
 // con reduce
 const numeros = [1, 2, 3, 4, 5];
 
-const res = numeros.reduce((acc, item) => {
-    return acc = acc + item;
+total = numeros.reduce(function (acc, elemento) {
+    return acc += elemento;
 }, 0)
-console.log(res);
 
-const res2 = carrito.reduce((total, producto) => {
-    return total = total + producto.precio;
-}, 0);
+console.log(total);
 
-console.log(res2);
+total = carrito.reduce(function (acc, producto) {
+    return acc += producto.precio
+}, 0)
+
+console.log(total)

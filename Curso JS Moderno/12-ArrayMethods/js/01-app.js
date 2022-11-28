@@ -1,5 +1,6 @@
-//metodos para arreglos
-//Some 
+/***metodos para arreglos***/
+/***Some***/
+//comprueba si al menos un elemento del array cumple con la condicion de la funcion callback
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
 
 const carrito = [
@@ -11,31 +12,25 @@ const carrito = [
     { nombre: 'Celular', precio: 700 },
 ]
 
+//recorremos y mostramos los elementos del arreglo
 meses.forEach((mes) => {
     console.log(mes);
 });
 
-const resultado = meses.includes('Enero');
+//includes revisa si un valor existe en un arreglo, retorna un boolean
+const resultado = meses.includes("Abril");
+console.log(resultado);
 
-//console.log(resultado);
+//Some para encontrar elementos en un arreglo de objetos
+let existe = carrito.some((producto) => {
+    return producto.nombre === "Celular"
+})
+console.log(existe)
 
-//Some se utiliza en arreglos de objetos:segun juan de la torre
-//Some recibe una funcion y se puede usar con cualquier tipo de arreglo
-const existe = carrito.some((producto) => {
-    return producto.nombre === 'Celular';
-});
+//some en arreglo tradicional
 
-//console.log(existe);
-
-//arreglo tradicional con .some
-const existe2 = meses.some(mes => {
-    return mes === 'Enero';
+existe = meses.some(function (mes) {
+    return mes === 'Abril'
 })
 
-//console.log(existe2);
-
-const enero = function(mes) {
-    return mes === 'Enero';
-};
-
-console.log(meses.some(enero));
+console.log(existe);

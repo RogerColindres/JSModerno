@@ -1,5 +1,5 @@
-//filter
-//El método filter()crea un nuevo array con todos los elementos que cumplen la condición implementada por la función dada.
+/***filter***/
+//El método filter() crea un nuevo arreglo con todos los elementos que cumplen la condición dada en la funcion callback
 
 
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
@@ -13,6 +13,15 @@ const carrito = [
     { nombre: 'Celular', precio: 700 },
 ];
 
+let resultado = [];
+carrito.forEach(function (producto, index) {
+    if (producto.precio >= 400) {
+        resultado.push(carrito[index])
+    }
+})
+console.log(resultado);
+
+//array method filter
 const carrito2 = carrito.filter((producto) => producto.precio >= 400);
 
 console.log(carrito2);

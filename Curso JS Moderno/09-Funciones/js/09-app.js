@@ -1,18 +1,18 @@
-//Añadir funciones a un objeto
+/***Añadir funciones a un objeto***/
 const reproductor = {
-    reproducir: function(id) {
+    reproducir: function (id) {
         console.log(`Reproduciendo Cancion con ID: ${id}`)
     },
-    pausar: function() {
+    pausar: function () {
         console.log(`Pausando...`)
     },
-    borrar: function() {
+    borrar: function () {
         console.log(`Borrando Cacion...`)
     },
-    crearlista: function(nombre) {
+    crearlista: function (nombre) {
         console.log(`Creando nueva lista de reproduccion ${nombre}`)
     },
-    reprudicrLista: function(nombre) {
+    reproducirLista: function (nombre) {
         console.log(`Reproducuiendo lista: ${nombre}`)
     }
 
@@ -21,4 +21,4 @@ const reproductor = {
 reproductor.reproducir(30);
 reproductor.pausar();
 reproductor.crearlista("Clasicos");
-reproductor.reprudicrLista("Clasicos");
+reproductor.reproducirLista("Clasicos");

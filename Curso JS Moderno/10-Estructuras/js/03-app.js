@@ -1,4 +1,4 @@
-//Mayor que y Menos que
+//Mayor que y Menor que
 const dinero = 500;
 const totalPagar = 300;
 

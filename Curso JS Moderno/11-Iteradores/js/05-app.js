@@ -1,4 +1,4 @@
-//Do-While
+/***Do-While loop***/
 let i = 1;
 
 do {

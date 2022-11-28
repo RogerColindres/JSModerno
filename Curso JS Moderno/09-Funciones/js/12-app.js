@@ -1,4 +1,4 @@
-//funcion flecha en foreach y map
+/***funcion flecha en foreach y map***/
 const carrito = [
     { nombre: 'monitor', precio: 100 },
     { nombre: 'pantalla', precio: 200 },

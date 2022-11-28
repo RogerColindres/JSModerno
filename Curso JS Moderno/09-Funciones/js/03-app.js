@@ -1,8 +1,8 @@
-//funciones nativas de javascript
+/***Algunas funciones nativas de JS***/
 //librerias estandar o libreria del js
 
-//alert("error");
+alert("error");
 
-//prompt("cual es tu edad??")
+prompt("cual es tu edad??")
 
 console.log(parseInt("20"));

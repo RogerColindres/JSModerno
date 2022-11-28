@@ -1,5 +1,5 @@
-//forOF
-//La sentencia sentencia for...of ejecuta un bloque de código para cada elemento de un objeto iterablezz
+/***forOF***/
+//La sentencia sentencia for...of ejecuta un bloque de código para cada elemento de un objeto iterable
 const pendientes = ['Tarea', 'Comer', 'Proyecto', 'Estudiar JS'];
 
 const carrito = [
