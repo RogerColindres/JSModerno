@@ -13,7 +13,19 @@ parrafo2.classList.add('titulo');
 const parrafo3 = document.createElement('p');
 parrafo3.textContent = '$800 por persona';
 parrafo3.classList.add('precio');
-parrafo3.onclick = nuevaFuncion;
+
+//cuando la funcion asociada al evento no recibe parametros lo podes hacer de la siguiente manera
+// parrafo3.onclick = nuevaFuncion;
+
+//pero cuendo la funcion que llamamos por un evento recibe parametros tenemos que hacer el llamado de la funcion desde una funcion anonima para evitar que se auto ejecute, ejemplo
+
+parrafo3.onclick = function () {
+    //desde aqui hacemos el llamdo de la funcion con parametros
+    nuevaFuncion(1)
+}
+
+//lo anterior es ideal para cuando creamos contenido HTML y queremos ir agradegandole funciones asociadas a un evento
+
 
 // crear el div...
 const info = document.createElement('div');
@@ -39,6 +51,8 @@ contenedorCard.appendChild(info);
 // Insertarlo en el HTML...
 const contenedor = document.querySelector('.hacer .contenedor-cards');
 contenedor.appendChild(contenedorCard); // al inicio info
-function nuevaFuncion() {
-    console.log('Desde neuva funcion')
+
+
+function nuevaFuncion(a) {
+    console.log('Desde nueva funcion', a)
 }

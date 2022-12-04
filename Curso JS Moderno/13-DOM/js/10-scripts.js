@@ -1,54 +1,79 @@
 //Generar un HTML con JS
-const enlace = document.createElement('A'); //creando un enlace
-enlace.textContent = 'Nuevo Enlace'; //agregando contenido (texto) al nuevo elemento
-enlace.href = '/nuevo-enlace';
-const navegacion = document.querySelector('.navegacion');
-//agregandoel nuevo enlace a navegacion, haciendo recorrido de DOM
-//una forma de hacerlo
-//navegacion.children[1].appendChild(enlace);
-enlace.onclick = miFuncion;
-//insertando nuevo enlace usando insertBefore
-navegacion.insertBefore(enlace, navegacion.children[1]);
-//console.log(enlace);
+//creando un enlaces, sus propiedades e insertadolo desde JS a HTML
+const enlace = document.createElement('A'); //creando un enlace <a></a>
+enlace.textContent = 'Nuevo Enlace' //Agregando texto
+enlace.href = 'https://google.com'// agraegando direccion al nuevo enlace
+enlace.target = '_blanck'
+enlace.classList.add('nueva-clase')//agregando nueva clase
+//agregando una funcion de evento al nuevo enlace
+enlace.onclick = mifuncion;
 
-function miFuncion() {
-    alert('Diste click')
+function mifuncion() {
+    alert('Diste Click')
 }
 
-//creando un nuevo card de forma dinamica
-const parrafo1 = document.createElement('P');
-const parrafo2 = document.createElement('P');
-const parrafo3 = document.createElement('P');
+//seleccionando donde agregaremos el enlace
+const navegacion = document.querySelector('.navegacion');
+//agregando el nuevo enlace a navegacion
+//.appendChild
+navegacion.appendChild(enlace)
+//.insertBefore
+//navegacion.insertBefore(enlace, navegacion.children[0])
 
+
+// console.log(enlace);
+// console.log(navegacion.children);
+
+//Creando un Card (tarjeta), sus propiedades e insertandolo desde JS a HTML
+//creando los parrafos
+const parrafo1 = document.createElement('P');
 parrafo1.textContent = 'Concierto';
 parrafo1.classList.add('categoria', 'concierto');
-parrafo2.textContent = 'Concierto de Rock'
-parrafo2.classList.add('titutlo');
-parrafo3.textContent = '$1200 por persona';
-parrafo3.classList.add('precio');
 
-//creando el contenedor donde se encuentran los elementos de un card
+const parrafo2 = document.createElement('P');
+parrafo2.textContent = 'concierto de AC/DC';
+parrafo2.classList.add('titulo');
+
+const parrafo3 = document.createElement('P');
+parrafo3.textContent = '$2000 por persona'
+parrafo3.classList.add('precio')
+
+//creando div (info) para contener parrafos
 const info = document.createElement('DIV');
-//creando el contenedor para el card completo
-const card = document.createElement('DIV');
-//creando imagen para para el card
-const imagen = document.createElement('IMG');
-imagen.src = 'img/hacer2.jpg';
-
-//agragando clases a contenedorCard y card
 info.classList.add('info');
-card.classList.add('card');
 
-//agregando los parrafor a contenedorCard
+//creando imagen
+const imagen = document.createElement('IMG')
+imagen.src = 'img/hacer2.jpg'
+imagen.alt = 'cconcierto de Rock'
+
+
+//agregando los tres parrafos a info
 info.appendChild(parrafo1);
 info.appendChild(parrafo2);
 info.appendChild(parrafo3);
 
-//agregando elementos al Card nuevo
-card.appendChild(imagen);
-card.appendChild(info);
+//creando el div (card) para contener todos los elementos
+//info e imagen que componen el card
+const card = document.createElement('DIV');
+card.classList.add('card');
+//Agregando los elementos a card
+card.appendChild(imagen);//imagen
+card.appendChild(info);//info
 
-//agregamos el elemento creado al conjunto de cards
-const contenedorCards = document.querySelector('.hacer .contenedor-cards');
-//insertandolo al HTML
-contenedorCards.insertBefore(card, contenedorCards.children[0]);
+//seleccionando el contenedor para insertar el card creado, JS a HTML
+const contenedor = document.querySelector('.hacer .contenedor-cards');
+//appendChild
+//contenedor.appendChild(card);
+//.insertBefore
+contenedor.insertBefore(card, contenedor.children[0])
+
+
+// console.log(parrafo1)
+// console.log(parrafo2)
+// console.log(parrafo3)
+// console.log(info.children)
+// console.log(imagen)
+// console.log(card)
+// console.log(card.children[1].children)
+console.log(contenedor);

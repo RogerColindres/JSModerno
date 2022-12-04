@@ -5,7 +5,7 @@
 const card = document.querySelector('.card');
 console.log(card);
 
-//podemos tener selectores especificos como css
+//podemos tener selectores especificos como en css
 
 const info = document.querySelector('.contenedor-cards .info'); //o premium
 console.log(info);
@@ -18,6 +18,6 @@ console.log(segundoCard);
 const formulario = document.querySelector('#formulario');
 console.log(formulario);
 
-//seleccionar elemento html
+//seleccionar elementos html
 const nav = document.querySelector('nav');
 console.log(nav);

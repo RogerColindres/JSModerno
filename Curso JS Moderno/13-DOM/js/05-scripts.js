@@ -3,3 +3,5 @@ const card = document.querySelectorAll('.card');
 console.log(card);
 //nodelist es un arreglo con los elementos, puesto que cada elemento son nodos
 //si no existe, querySelectorAll retorna un nodelist vacio
+const noExiste = document.querySelectorAll('.no_existe')
+console.log(noExiste)
