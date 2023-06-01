@@ -10,6 +10,9 @@ const contenedores = document.getElementsByClassName('contenedor');
 //si la clase no existe se devuelve o retorna un elemento vacio
 const noExiste = document.getElementsByClassName('no-existe');
 
+const card = document.getElementsByClassName('card');
+console.log(card[1]);
+
 console.log(elemento);
 console.log(hero);
 console.log(contenedores);
