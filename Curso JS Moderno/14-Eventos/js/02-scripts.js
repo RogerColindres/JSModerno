@@ -6,7 +6,7 @@ const nav = document.querySelector('.navegacion');
 //El evento ocurre cuando el usuario hace clic en un elemento
 // nav.addEventListener('click', () => {
 //     console.log('click en la navegacion')
-// })
+// });
 
 //El evento ocurre cuando el puntero se mueve sobre un elemento.
 // nav.addEventListener('mouseenter', function () {

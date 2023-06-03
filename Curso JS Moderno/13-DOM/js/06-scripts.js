@@ -8,10 +8,10 @@ console.log(encabezado);
 
 //encademanmiento
 const encabezado2 = document.querySelector('.contenido-hero h1').textContent; //obtiene el contenido del elemento seleccionado
-// console.log(encabezado2);
+//console.log(encabezado2);
 
 
-//modificando el exto con textcontent
+//modificando el texto con textcontent
 //document.querySelector('.contenido-hero h1').textContent = 'Nuevo Heading';
 
 //seleccionando una imagen y modificandola
